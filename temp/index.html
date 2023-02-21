@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="arquivos/favicon.png" type="image/x-icon">
+    <title>Temporizador</title>
+</head>
+<body>
+
+    <div class="conteiner">
+        <section class="relogio">
+            <div id="horas">
+                
+            </div>
+            <small>Horas</small>
+        </section>
+
+        <section class="relogio">
+            <div id="minutos">
+                
+            </div>
+            <small>Minutos</small>
+        </section>
+
+        <section class="relogio">
+            <div id="segundos">
+                
+            </div>
+            <small>Segundos</small>
+        </section>
+    </div>
+
+    <div class="conteinerTemp">
+
+        <audio id="alarme" src="arquivos/alarme.mp3"></audio>
+
+        <section class="temporizador">
+            <h1>horas</h1>
+            <select name="HorasT" id="horasT"></select>
+
+            <h1>minutos</h1>
+            <select name="MinutosT" id="minutosT"></select>
+
+            <h1>segundos</h1>
+            <select name="SegundosT" id="segundosT"></select>
+
+            <small>Nenhum valor definido.</small>
+        </section>
+        
+        <button id="buttonIniciar">Iniciar</button>
+        <button id="buttonZerar">X</button>
+
+        <div id="display">
+            <p>00:00:00</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+@charset 'UTF-8';
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+@font-face {
+    font-family: 'digital';
+    src: url(font/DS-DIGI.TTF);
+    src: url(font/DS-DIGIB.TTF);
+    src: url(font/DS-DIGII.TTF);
+    src: url(font/DS-DIGIT.TTF);
+}
+
+*{
+    font-family: 'Orbitron', Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #dc3545;
+}
+
+.conteiner {
+    display: flex;
+    align-items: center;                   /**     NEW     **/
+    justify-content: space-around;
+    
+    background-color: rgba(255, 255, 255, 0.756);
+    width: 400px;
+    max-width: 100%;
+    padding: 10px;
+    margin: 20px auto 10px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.55);
+}
+
+.relogio {
+    display: flex;
+    flex-direction: column;           /**     NEW     **/
+    align-items: center;            
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.89);
+    color: rgba(255, 255, 255, 0.897);
+    text-align: center;
+    padding: 10px;
+    width: 110px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.333);
+}
+
+.relogio div {
+    font-size: 4em;
+    font-family: 'digital', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.relogio small {
+    font-size: 0.6em;
+
+    letter-spacing: 2px;        /**     NEW     **/
+}
+
+.conteinerTemp {
+    background-color: rgba(0, 0, 0, 0.858);
+    color: rgba(255, 255, 255, 0.897);
+    width: 300px;
+    margin: 20px auto 0px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.589);
+}
+
+.temporizador {
+    position: relative;
+}
+
+.temporizador h1 {
+    margin: 0px 0px 10px;
+    font-size: 2.2em;
+    font-variant: small-caps;
+}
+
+.temporizador select {
+    background-color: black;
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.897);
+    width: 50px;
+    height: 25px;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.temporizador small {
+    position: absolute;
+    left: 5.5em;
+    bottom: -8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    visibility: hidden;
+}
+
+.conteinerTemp button {
+    width: 100px;
+    height: 35px;
+    margin: 15px 1px 5px;
+    cursor: pointer;
+}
+
+.conteinerTemp button:active {
+    transform: translate(0, 5%);
+}
+
+#buttonIniciar {
+    margin-left: 40px;
+    background-color: rgb(0, 169, 0);    
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+#buttonIniciar:hover {
+    background-color: rgba(0, 169, 0, 0.817);
+}
+
+#buttonIniciar:active {
+    background-color: rgb(0, 169, 0);
+}
+
+#buttonZerar {
+    width: 40px;
+    background-color: rgba(255, 57, 57, 0.79);    
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+#buttonZerar:hover {
+    background-color: rgba(255, 57, 57, 0.674);
+}
+
+#buttonZerar:active {
+    background-color: rgba(255, 57, 57, 0.89);
+}
+
+
+#display {
+    font-size: 4em;
+}
+
+#display p {
+    font-family: 'digital', Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+    letter-spacing: 3px;
+}
+
+.temporizador.error select {
+    border: 1.5px solid rgb(255, 66, 66);
+}
+
+.temporizador.error small {
+    color: rgb(255, 66, 66);
+    visibility: visible;
+}
